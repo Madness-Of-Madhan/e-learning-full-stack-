@@ -1,0 +1,94 @@
+/* src/components/CourseEnrollmentForm.css */
+.fobody{
+  background: rgb(224,224,234);
+    background: linear-gradient(187deg, rgba(224,224,234,1) 0%, rgba(236,236,241,0.6811974789915967) 0%, rgba(42,165,228,0.7764355742296919) 100%);
+
+}
+.enrollment-form-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+  
+  .form-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .form-header h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .form-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .image-slider {
+    width: 100%;
+    height: 300px; /* Adjusted height for better visibility */
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .image-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure images cover the container */
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .enrollment-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .enrollment-form label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .enrollment-form input, 
+  .enrollment-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  .enrollment-form textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  
+    .butto
+    {
+        margin-top: 100px;
+        background-color: #45a049;
+        border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    }
+  
+  

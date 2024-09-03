@@ -1,0 +1,28 @@
+/* Feedback */
+
+  .feedback-section,
+  .faq-section {
+    background-color: #e0e0e0;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background: rgb(224,224,234);
+    background: linear-gradient(187deg, rgba(224,224,234,1) 0%, rgba(236,236,241,0.6811974789915967) 0%, rgba(42,165,228,0.7764355742296919) 100%);
+  }
+  
+  .feedback-list {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  .feedback-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .faq-section {
+    margin-top: 20px;
+  }
+  

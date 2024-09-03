@@ -1,0 +1,914 @@
+/* Home */
+/* Header Styles */
+@import url('https://fonts.googleapis.com/css2?family=Quincy+CF:wght@400;700&family=Cornerstone:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Dosis:wght@200..800&family=Pacifico&display=swap");
+.header {
+  background: linear-gradient(90deg, #003399, #0099ff);
+  backdrop-filter: blur(10px);
+  box-shadow: none;
+  padding: 10px 0;
+  height: 80px;
+}
+
+.header .logo img {
+  height: 10px;
+}
+
+.header .navbar {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.header .navbar a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  transition: color 0.3s ease-in-out;
+}
+
+.header .navbar a:hover {
+  color: #ffeb3b; /* Example hover color */
+}
+
+.header .search-bar {
+  position: relative;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.15);
+  margin-right: 20px;
+  padding: 5px 20px;
+  width: 250px;
+}
+
+.header .search-bar input {
+  color: white;
+  background: transparent;
+  border: none;
+  padding-left: 40px;
+  width: 100%;
+}
+
+.header .search-bar input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.header .icons .MuiIconButton-root {
+  color: white;
+  margin-left: 10px;
+}
+
+.header .icons .MuiIconButton-root:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* General Styles */
+.home-page {
+  position: relative;
+}
+
+/* Intro Section */
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 50px;
+  /* background: url('../img/Ac/b.jpg') no-repeat center center; */
+  background: rgb(34,193,195);
+  background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(45,116,253,0.9893207282913166) 100%);
+  background-size: cover;
+  color: #111111; /* Adjust text color if necessary */
+}
+
+.intro-text h2 {
+  /* font-family: 'Roboto', sans-serif; 
+  font-weight: 700; */
+  font-family: "Dosis", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.intro-text p {
+  font-family: "Dosis", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+
+/* Video Section */
+.videos {
+  padding: 20px;
+  background: #f0f0f0;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.video-grid video {
+  width: 100%;
+}
+
+/* Section Styles */
+.section {
+  padding: 20px;
+  background-color: #f9f9f9;
+  margin: 20px 0;
+}
+
+.section h2 {
+  color: #003399;
+}
+
+/* Courses Section */
+.courses {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.course-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.course-card h3 {
+  margin: 10px;
+  font-size: 1.2em;
+}
+
+.course-card p {
+  margin: 0 10px 10px;
+}
+
+.course-button {
+  display: block;
+  margin: 0 10px 10px;
+  padding: 10px;
+  background: linear-gradient(90deg, #003399, #0099ff);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.course-button:hover {
+  background: linear-gradient(90deg, #002266, #0088cc);
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Sponsors Section */
+.sponsors {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.sponsor-logos {
+  display: flex;
+  align-items: center;
+}
+
+.sponsor-logos img {
+  height: 50px;
+  margin: 0 10px;
+}
+
+/* Custom Cursor */
+.custom-cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #003399;
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none;
+  transition: transform 0.2s ease;
+  z-index: 10000;
+}
+
+/* Background Effects */
+.interactive-background {
+  position: relative;
+  width: 100%;
+}
+
+.background-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  animation: background-move 10s infinite alternate;
+}
+
+@keyframes background-move {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+/* Preloader Styles */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  z-index: 10000; /* Ensure it appears above all other content */
+}
+
+/* Slider Container Styles */
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 0 20px; /* Adjust side padding here */
+}
+
+/* Slider Wrapper Styles */
+.slider-wrapper {
+  display: flex;
+  transition: transform 0.5s ease; /* Smooth sliding effect */
+}
+
+/* Slide Styles */
+.slide {
+  min-width: 100%; /* Each slide takes up full width of container */
+  transition: 0.5s; /* Smooth transition for slide changes */
+}
+
+.slide img {
+  width: 100%; /* Ensure image covers the slide container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Button Styles */
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Vertically center the buttons */
+  background: rgba(255, 255, 255, 0.7); 
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 1; /* Ensure buttons appear above the slides */
+  padding: 10px; /* Add padding to increase click area */
+}
+
+button:focus {
+  outline: none; /* Remove default focus outline */
+}
+
+/* Prev and Next Button Styles */
+.prev-button {
+  left: 20px; /* Position prev button on the left */
+}
+
+.next-button {
+  right: 20px; /* Position next button on the right */
+}
+.article-section {
+  padding: 20px;
+}
+.image-with-text-container {
+  display: flex;
+  flex: auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.image-item {
+  position: relative;
+  width: 30%;
+  min-width: 200px; /* Adjust based on your layout */
+  text-align: center;
+}
+
+.image-background {
+  background-color: #b3e0ff; 
+  border-radius: 50%;
+  padding: 20px;
+  display: inline-block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-background img {
+  display: block;
+  max-width: 100%;
+  height: 150px;
+  border-radius: 50%;
+}
+
+p {
+  margin-top: 10px;
+  color: #333;
+}
+.alumni-card {
+  background-color: #f0f8ff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 10px;
+}
+
+.alumni-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  margin-left: 180px;
+}
+
+.alumni-card h3 {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+.alumni-card p {
+  margin: 5px 0;
+}
+
+.rating {
+  font-size: 1.2em;
+  color: gold;
+}
+
+.feedback {
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.marquee-image {
+  display: inline-block;
+  margin-right: 20px; /* Adjust spacing between images */
+}
+
+.marquee-image img {
+  width: 100px; /* Adjust the width as needed */
+  height: 50px; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional: Add rounded corners */
+}
+/* Import fonts */
+
+
+.image-with-text-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.image-item {
+  position: relative;
+  width: 300px;
+  margin: 20px;
+  text-align: center;
+  font-family: 'Quincy CF', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.image-background img {
+  width: 100%;
+  height: 100px;
+  border-radius: 10px;
+  transition: opacity 0.3s ease;
+}
+
+.image-background img:hover {
+  opacity: 0.8;
+}
+
+p {
+  margin-top: 10px;
+  font-family: 'Cornerstone', sans-serif;
+  font-size: 16px; /* Adjust font size as needed */
+  color: #333;
+}
+
+.image-item:hover p {
+  color: #007BFF; /* Change text color on hover */
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Flex Container for Centering Content */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Flex Container for Full Width and Height */
+.flex-full {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.button--typeA {
+  --mainColor   : #040a0c; /* Dark blue */
+  --subColor_1  : #e0f7ff; /* Light blue */
+  --subColor_2  : #a0e0ff; /* Medium light blue */
+  --accentColor : #ffffff; /* White */
+  --treeColor   : #010709; /* Dark blue */
+  --skyColor    : #87ceeb; /* Sky blue */
+  --leafColor_1 : #1e90ff; /* Dodger blue */
+  --leafColor_2 : #00bfff; /* Deep sky blue */
+}
+
+.button {
+  position : relative ;
+  width : 280px ;
+  height : 80px ;
+  border-radius : 40px 40px 4px 40px ;
+  background : var(--treeColor) ;
+  transition : all ease .3s ;
+  box-shadow : 0 0 24px rgba(0,0,0,.2) ;
+  cursor: pointer;
+}
+.button__wrapper {
+  position : absolute ;
+  z-index : 1 ;
+  width : 100% ;
+  height : 100% ;
+  border-radius : 40px ;
+}
+.material1 {
+  position : absolute ;
+  top : -45px ;
+  right : -24px ;
+  width : 64px ;
+  height : 64px ;
+  border-radius : 50% ;
+  overflow : hidden ;
+  transform : rotate(30deg) ;
+}
+.material2 {
+  position : absolute ;
+  top : -44px ;
+  right : 18px ;
+  width : 48px ;
+  height : 48px ;
+  border-radius : 50% ;
+  overflow : hidden ;
+  transform : rotate(-40deg) ;
+}
+.material1::before {
+  content : '' ;
+  position : absolute ;
+  top : 0 ;
+  left : -50% ;
+  width : 100% ;
+  height : 100% ;
+  border-radius : 50% ;
+  background : var(--leafColor_1);
+}
+.material2::before {
+  content : '' ;
+  position : absolute ;
+  top : 0 ;
+  left : -50% ;
+  width : 100% ;
+  height : 100% ;
+  border-radius : 50% ;
+  background : var(--leafColor_2) ;
+}
+.button__text {
+  display : flex ;
+  justify-content : center ;
+  align-items : center ;
+  position : absolute ;
+  z-index : 1 ;
+  top : 0 ;
+  right: 0 ;
+  width : 160px ;
+  height : 100% ;
+  font-family: 'Paytone One', sans-serif;
+  font-size : 32px ;
+  color : #fff ;
+  letter-spacing : 3px ;
+  transition : all ease .3s ;
+}
+.bird {
+  position : absolute ;
+  z-index : 2 ;
+  top : -80px ;
+  left : -120px ;
+  display : grid ;
+  grid-template-columns : repeat(3 , 80px) ;
+  grid-template-rows : repeat(3 , 80px) ;
+  position : relative ;
+  width : 240px ;
+  height : 240px ;
+  transition : all ease .3s ;
+}
+.block {
+  position : relative ;
+  display : flex ;
+  width : 80px ;
+  height : 80px ;
+  box-sizing : border-box ;
+  overflow : hidden ;
+}
+.block_A {
+  grid-column : 1 / 2 ;
+  grid-row : 1 / 2 ;
+}
+.block_B {
+  grid-column : 2 / 3 ;
+  grid-row : 1 / 2 ;
+}
+.block_C {
+  grid-column : 3 / 4 ;
+  grid-row : 1 / 2 ; 
+}
+.block_D {
+  grid-column : 2 / 3 ;
+  grid-row : 2 / 3 ;
+}
+.block_E {
+  grid-column : 3 / 4 ;
+  grid-row : 2 / 3 ;
+}
+.block_F {
+  grid-column : 3 / 4 ;
+  grid-row : 3 / 4 ;
+}
+.inner {
+  position : absolute ;
+  width : 80px ;
+  height : 80px ;
+  box-sizing : border-box ;
+  overflow : hidden ;
+  transition : all ease .4s ;
+}
+.inner::before,
+.inner::after {
+  content : '' ;
+  position : absolute ;
+}
+/* A */
+.A_1 {
+  top : 0 ;
+  left : 0 ;
+}
+.A_2 {
+  transform-origin : top right ;
+  bottom : -100% ;
+  left : 0 ;
+}
+.A_2::before {
+  z-index : 1 ;
+  bottom : 0 ;
+  left : 0 ;
+  width : 200% ;
+  height : 200% ;
+  border-radius : 50% ;
+  background : var(--subColor_1) ;
+}
+.A_2::after {
+  z-index : 2 ;
+  bottom : 50% ;
+  left : 50% ;
+  width : 100% ;
+  height : 100% ;
+  border-radius : 50% ;
+  background : var(--subColor_2) ;
+}
+.button:hover .bird .A_2 {
+  transform : rotate(90deg) ;
+}
+/* B */
+.B_1 {
+  transform-origin : bottom right ;
+  bottom : 0 ;
+  right : 0 ;
+}
+.B_2 {
+  transform-origin : bottom right ;
+  top : 0 ;
+  left : -100% ;
+}
+.B_1::before {
+  top : 0 ;
+  left : 0 ;
+  width : 200% ;
+  height : 200% ;
+  border-radius : 50% ;
+  background : var(--mainColor) ;
+}
+.B_1::after {
+  bottom : 16px ;
+  right : 16px ;
+  margin : auto ;
+  width : 16px ;
+  height : 16px ;
+  border-radius : 50% ;
+  border : solid 4px var(--accentColor) ;
+  background : #FFF ;
+}
+.B_2::before {
+  top : 0 ;
+  left : 0 ;
+  width : 200% ;
+  height : 200% ;
+  border-radius : 50% ;
+  background : var(--mainColor) ;
+}
+.B_2::after {
+  bottom : 16px ;
+  right : 16px ;
+  margin : auto ;
+  width : 16px ;
+  height : 16px ;
+  border-radius : 50% ;
+  border : solid 4px var(--accentColor) ;
+  background : #FFF ;
+}
+.button:hover .bird .B_1 {
+  transform : rotate(-90deg) ;
+}
+.button:hover .bird .B_2 {
+  transform : rotate(90deg) ;
+}
+/* C */
+.C_1 {
+  transform-origin : bottom left ;
+  bottom : 0 ;
+  left : 100% ;
+}
+.C_2 {
+  transform-origin : bottom left ;
+  bottom : 0 ;
+  left : 0 ;
+}
+.C_1::before {
+  z-index : 1 ;
+  top : 0 ;
+  right : 0 ;
+  width : 200% ;
+  height : 200% ;
+  border-radius : 50% ;
+  background : var(--mainColor) ;
+}
+.C_1::after {
+  z-index : 2 ;
+  top : 50% ;
+  right : 50% ;
+  width : 100% ;
+  height : 100% ;
+  border-radius : 50% ;
+  background : var(--accentColor)  ;
+}
+.C_2::before {
+  z-index : 1 ;
+  top : 0 ;
+  right : 0 ;
+  width : 200% ;
+  height : 200% ;
+  border-radius : 50% ;
+  background : var(--subColor_1) ;
+}
+.C_2::after {
+  z-index : 2 ;
+  top : 50% ;
+  right : 50% ;
+  width : 100% ;
+  height : 100% ;
+  border-radius : 50% ;
+  background : var(--subColor_2) ;
+}
+.button:hover .bird .C_1 {
+  transform : rotate(-90deg) ;
+}
+.button:hover .bird .C_2 {
+  transform : rotate(90deg) ;
+}
+/* D */
+.block_D {
+  width : 80px ;
+}
+.block_D::before {
+  content : '' ;
+  position : absolute ;
+  z-index : 1 ;
+  bottom : 0 ;
+  left : 0 ;
+  width : 200% ;
+  height : 200% ;
+  border-radius : 50% ;
+  background : var(--mainColor) ;
+}
+.block_D::after {
+  content : '' ;
+  position : absolute ;
+  z-index : 2 ;
+  bottom : 0  ;
+  right : -25% ;
+  width : 50% ;
+  height : 50% ;
+  border-radius : 50% ;
+  background : #FFF ;
+}
+/* E */
+.E_1 {
+  transform-origin : bottom left ;
+  top : -100% ;
+  right : 0 ;
+}
+.E_2 {
+  transform-origin :  bottom left;
+  top : 0 ;
+  left : 0 ;
+}
+.E_1::before {
+  top : 0 ;
+  right : 0 ;
+  width : 200% ;
+  height : 200% ;
+  border-radius : 50% ;
+  background : #FFF ;
+}
+.E_1::after {
+  bottom : -50% ;
+  left : -50% ;
+  width : 100% ;
+  height : 100% ;
+  border-radius : 50% ;
+  background : var(--mainColor) ;
+}
+.E_2::before {
+  top : 0 ;
+  right : 0 ;
+  width : 200% ;
+  height : 200% ;
+  border-radius : 50% ;
+  background : var(--mainColor) ;
+}
+.E_2::after {
+  bottom : -50% ;
+  left : -50% ;
+  width : 100% ;
+  height : 100% ;
+  border-radius : 50% ;
+  background : #FFF ;
+}
+.button:hover .bird .E_1 {
+  transform : rotate(90deg) ;
+}
+.button:hover .bird .E_2 {
+  transform : rotate(90deg) ;
+}
+/* F */
+.F_2 {
+  transform-origin : top left ;
+  top : 0 ;
+  left : 0 ;
+}
+.F_2::before {
+  bottom : 0 ;
+  right : 0 ;
+  width : 200% ;
+  height : 200% ;
+  border-radius : 50% ;
+  background : var(--mainColor) ;
+}
+.F_2::after {
+  bottom : 0 ;
+  left : -50% ;
+  width : 100% ;
+  height : 100% ;
+  border-radius : 0 0 40px 0 ;
+  border-top : solid 36px #fff ;
+  box-sizing : border-box ;
+  background : var(--accentColor) ;
+}
+.button:hover .bird .F_2 {
+  transform : rotate(90deg) ;
+}
+
+
+.button:hover {
+  border-radius : 40px 40px 40px 0 ;
+  background : var(--skyColor) ;
+}
+.button:hover .button__wrapper {
+  overflow : hidden ;
+}
+.button:hover .material1 {
+  border-radius : 0 ;
+  top : 4px ;
+  right : -64px ;
+  width : 56px ;
+  height : 24px ;
+  transform : rotate(0) ;
+  animation : cloud_move linear infinite 5s ;
+}
+.button:hover .material2 {
+  border-radius : 0 ;
+  top : 56px ;
+  right : -64px ;
+  width : 56px ;
+  height : 24px ;
+  transform : rotate(0) ;
+  animation : cloud_move linear infinite 5s 2s;
+}
+.button:hover .material1::before {
+  top : 0 ;
+  left : 0 ;
+  width : 40px ;
+  height : 12px ;
+  border-radius : 10px ;
+  background : #FFF ;
+}
+.button:hover .material2::before {
+  top : 0 ;
+  left : 0 ;
+  width : 40px ;
+  height : 12px ;
+  border-radius : 10px ;
+  background : #FFF ;
+}
+.button:hover .material1::after {
+  content : '' ;
+  position : absolute ;
+  top : 8px ;
+  right : 0 ;
+  width : 24px ;
+  height : 12px ;
+  border-radius : 10px ;
+  background : #FFF ;
+}
+.button:hover .material2::after {
+  content : '' ;
+  position : absolute ;
+  top : 8px ;
+  right : 0 ;
+  width : 24px ;
+  height : 12px ;
+  border-radius : 10px ;
+  background : #FFF ;
+}
+.button:hover .button__text {
+  width : 220px ;
+  letter-spacing : 6px ;
+}
+.button:hover .bird {
+  left : -160px ;
+}
+@keyframes cloud_move {
+  0%  { right : -64px ;}
+  100%{ right : 280px ;}
+}
+
+.container {
+  width : 100% ;
+  height : 300px ;
+  display : flex ;
+  flex-direction : column ;
+  justify-content : center ;
+  align-items : center ;
+} 
+
+
+
